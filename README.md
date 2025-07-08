@@ -1,15 +1,28 @@
-# Diesel Consumption Forecasting Dashboard (Spain)
+# ⛽ Macro Demand Forecast for Fuels and Eco-fuels in Spain
 
-## 🧠 About the Project
-This dashboard allows users to explore and forecast diesel and gasoline consumption across Spain using historical and economic data.
+This Streamlit dashboard presents interactive *fuel consumption forecasts* across Spain's Autonomous Communities. Users can explore historical and forecasted demand, view the best-performing model per region/product, and analyze confidence intervals—all based on precomputed results.
 
-## 📦 Repository Structure
-- /data_raw: Raw Excel inputs
-- /data_processed: Cleaned/merged data for modeling and display
-- /notebooks: Jupyter notebooks used in the data exploration phase
-- /scripts: Preprocessing scripts
+🔗 *Live app*:  
+[Click here to open the dashboard](https://macrodemandforfuelsandecofuelsinspain-dtmcxdfbb8dcjcdgqco4ab.streamlit.app/)
 
-## 🚀 How to Run the Dashboard
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+---
+
+## 📊 Dashboard Features
+
+- *Select region and fuel product* (e.g., Diesel A, Gasoline 95, HVO)
+- Display of *best model and MAPE* for each combination
+- *Time-series plot* of actual vs. predicted values with confidence bands
+- *Historical and forecast data table* in tonnes
+
+> Note: *HVO data is available only at the national level (España)*
+
+---
+
+## 📁 Repository Structure
+
+├── app.py # Streamlit app logic
+├── outputs/
+│ ├── Data_w_Predictions.xlsx # Historical + forecast data
+│ └── BestModels_MAPE.xlsx # Best model + MAPE per combination
+├── requirements.txt # Python dependencies
+└── README.md # This file
